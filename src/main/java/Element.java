@@ -1,8 +1,8 @@
 import java.util.*;
 
-public interface Element {
+    public interface Element {
 
-    public void print();
+     void print();
 
 
 }
