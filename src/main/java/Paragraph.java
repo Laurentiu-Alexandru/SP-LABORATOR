@@ -7,7 +7,7 @@ public class Paragraph implements Element{
     public Paragraph(String name) {
         this.paragraph = name;
     }
-
+    @Override
     public void print() {
 
         System.out.println(paragraph);

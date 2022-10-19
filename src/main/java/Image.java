@@ -8,8 +8,10 @@ public class Image implements Element{
         this.image = name;
     }
 
-    public void print() {
+    @Override
+     public void print() {
 
         System.out.println(image);
+
     }
 }

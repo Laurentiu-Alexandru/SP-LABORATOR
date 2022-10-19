@@ -8,6 +8,7 @@ public class Table implements Element{
         this.table = name;
     }
 
+    @Override
     public void print() {
         System.out.println(table);
     }
