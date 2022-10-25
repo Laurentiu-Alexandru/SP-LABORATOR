@@ -12,4 +12,19 @@ public class Table implements Element{
     public void print() {
         System.out.println(table);
     }
+
+    @Override
+    public void add(Element e) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void remove(Element e) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public Element getElemenent(int i) {
+        return null;
+    }
 }

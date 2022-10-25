@@ -3,14 +3,14 @@ import java.util.*;
 public class Chapter {
     private String name;
 
-    List<SubChapter> subchapters = new ArrayList<SubChapter>();
+    List<Section> subchapters = new ArrayList<Section>();
 
     public Chapter(String name) {
         this.name = name;
     }
 
     public int createSubChapter(String subchapter){
-        SubChapter subcapitol = new SubChapter(subchapter);
+        Section subcapitol = new Section(subchapter);
         subchapters.add(subcapitol);
         for (int i = 0 ; i < subchapters.size() ; i++)
         {
@@ -20,7 +20,7 @@ public class Chapter {
         return 0;
     }
 
-    public SubChapter getSubChapter(int index) {
+    public Section getSubChapter(int index) {
 
         return subchapters.get(index);
     }
