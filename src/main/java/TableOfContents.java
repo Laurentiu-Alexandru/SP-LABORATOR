@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class TableOfContents {
+public class TableOfContents implements Element{
 
     List<String> bookContentList = new ArrayList<String>();
 
@@ -10,5 +10,25 @@ public class TableOfContents {
         return "TableOfContents{" +
                 "bookContentList=" + bookContentList +
                 '}';
+    }
+
+    @Override
+    public void print() {
+
+    }
+
+    @Override
+    public void add(Element e) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void remove(Element e) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public Element getElemenent(int i) {
+        return null;
     }
 }

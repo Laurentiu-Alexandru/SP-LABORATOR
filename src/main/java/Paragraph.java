@@ -12,4 +12,19 @@ public class Paragraph implements Element{
 
         System.out.println(paragraph);
     }
+
+    @Override
+    public void add(Element e) {
+
+    }
+
+    @Override
+    public void remove(Element e) {
+
+    }
+
+    @Override
+    public Element getElemenent(int i) {
+        return null;
+    }
 }
