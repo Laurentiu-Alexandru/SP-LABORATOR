@@ -1,30 +1,25 @@
-import java.util.List;
-
 public class Paragraph implements Element{
+    String text;
 
-    String paragraph;
-
-    public Paragraph(String name) {
-        this.paragraph = name;
+    public Paragraph(String paragraph) {
+        this.text = paragraph;
     }
-    @Override
-    public void print() {
 
-        System.out.println(paragraph);
+    public void  print(){
+        System.out.println("Paragraph: " + text);
     }
 
     @Override
     public void add(Element e) {
-
+        throw new UnsupportedOperationException();
     }
-
     @Override
     public void remove(Element e) {
-
+        throw new UnsupportedOperationException();
     }
-
     @Override
-    public Element getElemenent(int i) {
-        return null;
+    public void get(int i) {
+        throw new UnsupportedOperationException();
     }
+
 }

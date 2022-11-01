@@ -1,13 +1,10 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-    public interface Element {
+public interface Element {
 
-     void print();
-     void add(Element e);
-
-     void remove(Element e);
-
-     Element getElemenent(int i);
-
-
+    public void print();
+    public void add(Element e);
+    public void remove(Element e);
+    public void get(int i);
 }

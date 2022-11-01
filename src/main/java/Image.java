@@ -1,32 +1,48 @@
-import java.util.List;
+import java.util.concurrent.TimeUnit;
 
-public class Image implements Element{
-
-    String image;
+public class Image implements Element, Picture{
+    String imageName;
 
     public Image(String name) {
-        this.image = name;
+        imageName = name;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-     public void print() {
-
-        System.out.println(image);
-
+    public void print() {
+        System.out.println("\n" + "Image with name: " + imageName);
     }
 
     @Override
     public void add(Element e) {
-        throw new UnsupportedOperationException();
     }
 
     @Override
     public void remove(Element e) {
-        throw new UnsupportedOperationException();
+
     }
 
     @Override
-    public Element getElemenent(int i) {
-        return null;
+    public void get(int i) {
+
+    }
+
+    @Override
+    public void url() {
+
+    }
+
+    @Override
+    public void dim() {
+
+    }
+
+    @Override
+    public void content() {
+
     }
 }
