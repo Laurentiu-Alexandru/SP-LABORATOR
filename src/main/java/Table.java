@@ -1,30 +1,25 @@
-import java.util.List;
-
 public class Table implements Element{
+    String title;
 
-    String table;
-
-    public Table(String name) {
-        this.table = name;
+    public Table(String table) {
+        this.title = table;
     }
 
-    @Override
-    public void print() {
-        System.out.println(table);
+    public void  print(){
+        System.out.println("Tabel: " + title);
     }
 
     @Override
     public void add(Element e) {
         throw new UnsupportedOperationException();
     }
-
     @Override
     public void remove(Element e) {
         throw new UnsupportedOperationException();
     }
-
     @Override
-    public Element getElemenent(int i) {
-        return null;
+    public void get(int i) {
+        throw new UnsupportedOperationException();
     }
+
 }

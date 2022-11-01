@@ -1,13 +1,13 @@
-public class Author extends Book{
+public class Author {
+
     String name;
 
     public Author(String name) {
-        super(name);
         this.name = name;
     }
 
-    public void print(){
-        System.out.println("Name of Author is: " + name);
-
+    public void  print(){
+        System.out.print("Author: " + name);
+        System.out.println();
     }
 }

@@ -1,40 +1,15 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Section implements Element{
-    String name;
-
-    List<Element> listoflists = new ArrayList<Element>();
-    public void addContent(Paragraph paragraph) {
-        listoflists.add(paragraph);
+    String title;
+    List<Element> ListofContent = new ArrayList<>();
+    public Section(String title) {
+        this.title = title;
     }
 
-    public void addContent(Section section){
-        listoflists.add(section);
-
-    }
-
-    public Section(String name) {
-        this.name = name;
-    }
-
-    public void addAuthor(Author author){
-
-        listoflists.add(author);
-    }
-
-    public void print() {
-        System.out.println(name);
-
-        for (Element e: listoflists
-             ) {
-            e.print();
-        }
-
-    }
-
-    @Override
     public void add(Element e) {
-        listoflists.add(e);
+        ListofContent.add(e);
     }
 
     @Override
@@ -43,10 +18,22 @@ public class Section implements Element{
     }
 
     @Override
-    public Element getElemenent(int i) {
-        return null;
+    public void get(int i) {
+    }
+    public void addContent(Paragraph paragraph) {
+        ListofContent.add(paragraph);
+    }
+    public void addContent(Section section){
+        ListofContent.add(section);
     }
 
+    public void print() {
+        System.out.print(title);
 
+        for (Element e:ListofContent
+        ) {
+            e.print();
+        }
+    }
 }
 
