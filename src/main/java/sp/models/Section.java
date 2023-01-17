@@ -19,6 +19,7 @@ public class Section implements Element, Visitee{
     int id;
     String title;
     @OneToMany
+    @Transient
     List<Element> ListofContent = new ArrayList<>();
     public Section(String title) {
         this.title = title;
