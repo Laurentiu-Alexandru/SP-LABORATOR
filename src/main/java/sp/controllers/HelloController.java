@@ -8,6 +8,7 @@ import sp.Component.ClientComponent;
 import sp.models.Author;
 import sp.models.Book;
 import sp.repositories.AuthorsRepository;
+import sp.repositories.BooksRepository;
 
 @RestController
 @RequestMapping()
@@ -16,6 +17,7 @@ public class HelloController {
 
 //    private final ClientComponent clientComponent;
     private final AuthorsRepository repository;
+    private final BooksRepository repository1;
 
     @GetMapping
     @RequestMapping("/author")
@@ -25,14 +27,14 @@ public class HelloController {
         return "Hello"+ A.getId()+A.getName();
 
     }
-/*
+
  @GetMapping
  @RequestMapping("/book")
  public String book(){
      Book b = new Book("Moara cu noroc");
-     repository.save(b);
+     repository1.save(b);
      return b.getTitle();
  }
-*/
+
 
 }
