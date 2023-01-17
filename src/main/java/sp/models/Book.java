@@ -1,6 +1,15 @@
+package sp.models;
+
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.Transient;
 import java.util.ArrayList;
 import java.util.List;
+@Entity
+@NoArgsConstructor
 public class Book extends Section{
+    @Transient
     List<Author> Authors = new ArrayList<>();
     public Book(String bookTitle) {
         super(bookTitle);
@@ -23,4 +32,7 @@ public class Book extends Section{
         }
     }
 
+    public Iterable<? extends Author> getAuthors() {
+        return Authors;
+    }
 }

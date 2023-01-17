@@ -1,8 +1,24 @@
+package sp.models;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section implements Element{
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@NoArgsConstructor
+public class Section implements Element, Visitee{
+    public String getTitle() {
+        return title;
+    }
+    @Id
+    @GeneratedValue
+    int id;
     String title;
+    @OneToMany
     List<Element> ListofContent = new ArrayList<>();
     public Section(String title) {
         this.title = title;
@@ -18,7 +34,8 @@ public class Section implements Element{
     }
 
     @Override
-    public void get(int i) {
+    public Element get(int i) {
+        return ListofContent.get(i);
     }
     public void addContent(Paragraph paragraph) {
         ListofContent.add(paragraph);
@@ -34,6 +51,11 @@ public class Section implements Element{
         ) {
             e.print();
         }
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitSection(this);
     }
 }
 

@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Test;
-
-import java.security.Provider;
+import sp.models.Element;
+import sp.models.Image;
+import sp.models.Paragraph;
+import sp.models.Section;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -16,7 +18,7 @@ public class SectionTest {
 
         section.add(child);
 
-        assertTrue(child == section.getElement(0));
+        assertTrue(child == section.get(0));
     }
 
     @Test
@@ -56,7 +58,7 @@ public class SectionTest {
 
         assertThrows(UnsupportedOperationException.class, () -> e.add(new Paragraph("")));
         assertThrows(UnsupportedOperationException.class, () -> e.remove(new Paragraph("")));
-        assertThrows(UnsupportedOperationException.class, () -> e.getElement((0)));
+        assertThrows(UnsupportedOperationException.class, () -> e.get((0)));
     }
 
     @Test
@@ -65,7 +67,7 @@ public class SectionTest {
 
         assertThrows(UnsupportedOperationException.class, () -> e.add(new Paragraph("")));
         assertThrows(UnsupportedOperationException.class, () -> e.remove(new Paragraph("")));
-        assertThrows(UnsupportedOperationException.class, () -> e.getElement((0)));
+        assertThrows(UnsupportedOperationException.class, () -> e.get((0)));
     }
 
 }

@@ -1,3 +1,5 @@
+package sp.models;
+
 import java.util.concurrent.TimeUnit;
 
 public class Image implements Element, Picture{
@@ -14,7 +16,7 @@ public class Image implements Element, Picture{
 
     @Override
     public void print() {
-        System.out.println("\n" + "Image with name: " + imageName);
+        System.out.println("\n" + "ro.uvt.sp.models.Image with name: " + imageName);
     }
 
     @Override
@@ -27,7 +29,7 @@ public class Image implements Element, Picture{
     }
 
     @Override
-    public void get(int i) {
+    public void accept(Visitor v) {
 
     }
 
