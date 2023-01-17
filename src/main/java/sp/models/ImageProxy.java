@@ -1,3 +1,5 @@
+package sp.models;
+
 public class ImageProxy implements Picture, Element {
     String url;
     Image realImage = null;
@@ -46,7 +48,8 @@ public class ImageProxy implements Picture, Element {
     }
 
     @Override
-    public void get(int i) {
+    public void accept(Visitor v) {
 
     }
+
 }

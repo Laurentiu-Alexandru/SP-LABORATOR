@@ -1,3 +1,5 @@
+package sp.models;
+
 public interface Picture {
     public void url();
     public void dim();
